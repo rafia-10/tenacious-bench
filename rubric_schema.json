@@ -1,0 +1,60 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tenacious-Bench v0.1 Rubric Schema",
+  "description": "Defines machine-evaluable scoring logic for each evaluation dimension in the benchmark.",
+  "type": "object",
+  "required": ["dimension_rubrics"],
+  "additionalProperties": false,
+
+  "properties": {
+    "dimension_rubrics": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": ["scoring_function", "max_score", "pass_threshold"],
+        "properties": {
+
+          "scoring_function": {
+            "type": "string",
+            "description": "Name of deterministic or LLM-based scoring function"
+          },
+
+          "max_score": {
+            "type": "number",
+            "const": 1.0
+          },
+
+          "pass_threshold": {
+            "type": "number",
+            "minimum": 0.0,
+            "maximum": 1.0
+          },
+
+          "checks": {
+            "type": "array",
+            "description": "Explicit evaluation checks used in scoring",
+            "items": {
+              "type": "object",
+              "required": ["check_name", "weight"],
+              "properties": {
+                "check_name": { "type": "string" },
+                "weight": { "type": "number" },
+
+                "rule": {
+                  "type": "string",
+                  "description": "Natural language rule for evaluator implementation"
+                }
+              }
+            }
+          },
+
+          "failure_conditions": {
+            "type": "array",
+            "items": { "type": "string" },
+            "description": "Hard fail conditions (instant zero score triggers)"
+          }
+        }
+      }
+    }
+  }
+}

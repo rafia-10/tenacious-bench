@@ -1,0 +1,137 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Tenacious-Bench v0.1 Dataset Schema",
+  "description": "Defines the structure of each evaluation task. This schema contains only data fields required to run a sales agent evaluation. No scoring logic is included here.",
+  "type": "object",
+  "required": [
+    "task_id",
+    "dimension",
+    "difficulty",
+    "source_mode",
+    "task_type",
+    "input",
+    "candidate_output",
+    "metadata"
+  ],
+  "additionalProperties": false,
+
+  "properties": {
+    "task_id": {
+      "type": "string",
+      "pattern": "^TB-(TD|PG|PE|HA)-[0-9]{3,4}$"
+    },
+
+    "task_type": {
+      "type": "string",
+      "description": "What the agent is expected to do",
+      "enum": [
+        "email_generation",
+        "reply_generation",
+        "re_engagement",
+        "pricing_response",
+        "staffing_commitment_response"
+      ]
+    },
+
+    "dimension": {
+      "type": "string",
+      "enum": [
+        "signal_grounding_fidelity",
+        "bench_commitment_honesty",
+        "icp_segment_appropriateness",
+        "competitor_gap_honesty",
+        "tone_preservation"
+      ]
+    },
+
+    "difficulty": {
+      "type": "integer",
+      "minimum": 1,
+      "maximum": 3
+    },
+
+    "source_mode": {
+      "type": "string",
+      "enum": [
+        "trace_derived",
+        "programmatic",
+        "llm_synthetic",
+        "adversarial_hand_authored"
+      ]
+    },
+
+    "input": {
+      "type": "object",
+      "required": [
+        "bench_summary",
+        "prior_thread",
+        "style_guide_constraints"
+      ],
+      "additionalProperties": false,
+
+      "properties": {
+        "hiring_signal_brief": { "type": ["object", "null"] },
+
+        "competitor_gap_brief": { "type": ["object", "null"] },
+
+        "bench_summary": {
+          "type": "object",
+          "required": ["total_engineers_on_bench"],
+          "properties": {
+            "total_engineers_on_bench": { "type": "integer" },
+            "stacks": { "type": "object" },
+            "snapshot_date": { "type": "string" }
+          }
+        },
+
+        "prior_thread": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["role", "content"],
+            "properties": {
+              "role": { "type": "string", "enum": ["agent", "prospect"] },
+              "content": { "type": "string" },
+              "turn_number": { "type": "integer" }
+            }
+          }
+        },
+
+        "style_guide_constraints": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "candidate_output": {
+      "type": ["string", "null"],
+      "description": "Model-generated response being evaluated"
+    },
+
+    "metadata": {
+      "type": "object",
+      "required": ["authored_date", "contamination_checked"],
+      "additionalProperties": false,
+
+      "properties": {
+        "authored_date": { "type": "string" },
+
+        "source_trace_id": { "type": ["string", "null"] },
+        "source_probe_id": { "type": ["string", "null"] },
+
+        "source_mode": {
+          "type": "string",
+          "enum": ["trace_derived","programmatic","llm_synthetic","hand_authored"]
+        },
+
+        "partition": {
+          "type": ["string", "null"],
+          "enum": ["train", "dev", "held_out", null]
+        },
+
+        "contamination_checked": { "type": "boolean" }
+      }
+    }
+  }
+}
