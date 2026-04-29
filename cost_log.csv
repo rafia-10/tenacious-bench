@@ -1,0 +1,6 @@
+timestamp,bucket,model,tokens_estimate,cost_usd,purpose
+2026-04-28T18:00:00Z,dataset_authoring,deepseek/deepseek-chat-v3-0324,12000,0.06,multi-llm synthesis probe expansion seeds (competitor_gap + signal_grounding dimensions)
+2026-04-28T19:30:00Z,dataset_authoring,qwen/qwen3-235b-a22b,8500,0.04,bulk judge filter on 93 synthesised probe-expansion tasks
+2026-04-28T21:00:00Z,dataset_authoring,deepseek/deepseek-chat-v3-0324,6000,0.03,second synthesis pass — tone_preservation adversarial variants
+2026-04-29T10:00:00Z,dataset_authoring,qwen/qwen3-235b-a22b,4000,0.02,dedup pairwise selection across 60 candidate tasks
+2026-04-29T13:00:00Z,dataset_authoring,anthropic/claude-sonnet-4-6,3500,0.21,spot-check judge calibration on 50 task sample (eval-tier; cost discipline exception noted)

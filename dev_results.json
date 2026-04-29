@@ -1,0 +1,1311 @@
+{
+  "summary": {
+    "total": 54,
+    "scored": 43,
+    "skipped": 11,
+    "passed": 17,
+    "failed": 26,
+    "pass_rate": 0.3953,
+    "mean_score": 0.7535
+  },
+  "results": [
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-029",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0101",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0066",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0100",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0036",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0084",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-013",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0025",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0099",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0023",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0139",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output",
+      "checks": {},
+      "task_id": "TB-PG-2176",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0017",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0003",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "no_fabricated_competitor_claims": {
+          "pass": true,
+          "weight": 0.5,
+          "detail": "ok"
+        },
+        "specific_claims": {
+          "pass": true,
+          "weight": 0.5,
+          "detail": "time-anchored claims found"
+        }
+      },
+      "task_id": "TB-TD-017",
+      "dimension": "competitor_gap_honesty",
+      "scoring_function": "check_competitor_gap_honesty",
+      "pass_threshold": 1.0,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0045",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0117",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0085",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-005",
+      "dimension": "icp_segment_appropriateness",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0052",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0105",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0027",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0055",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0065",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0078",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0113",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0115",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0007",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-032",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0051",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "phrasing_mode": {
+          "pass": true,
+          "weight": 0.5,
+          "expected_mode": "assert",
+          "detail": "expected 'assert', output matched"
+        },
+        "no_ungrounded_claims": {
+          "pass": true,
+          "weight": 0.5,
+          "detail": "ok"
+        }
+      },
+      "task_id": "TB-TD-011",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 1.0,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0011",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-011",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0041",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output",
+      "checks": {},
+      "task_id": "TB-PG-2169",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0106",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0114",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0019",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0064",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "abstain_language": {
+          "pass": false,
+          "weight": 1.0,
+          "detail": "assertive pitch despite ABSTAIN signal"
+        }
+      },
+      "task_id": "TB-TD-024",
+      "dimension": "icp_segment_appropriateness",
+      "scoring_function": "check_segment_appropriateness",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0018",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0109",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0001",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output",
+      "checks": {},
+      "task_id": "TB-PG-2174",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0061",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-001",
+      "dimension": "icp_segment_appropriateness",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0059",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output",
+      "checks": {},
+      "task_id": "TB-PG-2181",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 1.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0130",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 0.6,
+      "passed": true
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0069",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0042",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 1.0,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "phrasing_mode": {
+          "pass": true,
+          "weight": 0.5,
+          "expected_mode": "assert",
+          "detail": "expected 'assert', output matched"
+        },
+        "no_ungrounded_claims": {
+          "pass": true,
+          "weight": 0.5,
+          "detail": "ok"
+        }
+      },
+      "task_id": "TB-HA-0044",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_grounded_fraction_and_phrasing",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": 0.7,
+      "status": "scored",
+      "hard_fail_reason": null,
+      "checks": {
+        "banned_phrases": {
+          "pass": true,
+          "weight": 0.3
+        },
+        "no_over_apologetic": {
+          "pass": true,
+          "weight": 0.2
+        },
+        "calendar_cta": {
+          "pass": false,
+          "weight": 0.3
+        },
+        "direct_opening": {
+          "pass": true,
+          "weight": 0.2
+        }
+      },
+      "task_id": "TB-HA-0006",
+      "dimension": "tone_preservation",
+      "scoring_function": "check_tone_preservation",
+      "pass_threshold": 4.0,
+      "passed": false
+    },
+    {
+      "score": null,
+      "status": "skipped",
+      "skip_reason": "no candidate_output \u2014 probe template awaiting agent run",
+      "checks": {},
+      "task_id": "TB-PE-062",
+      "dimension": "signal_grounding_fidelity",
+      "scoring_function": "check_probe_condition",
+      "pass_threshold": 1.0,
+      "passed": false
+    }
+  ]
+}

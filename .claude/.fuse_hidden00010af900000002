@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python3 -c \"import sys,json; lines=sys.stdin.read\\(\\).strip\\(\\).split\\('\\\\n'\\); [print\\(json.dumps\\(json.loads\\(l\\), indent=2\\)\\) for l in lines[:1]]\")",
+      "Bash(python3 *)"
+    ]
+  }
+}

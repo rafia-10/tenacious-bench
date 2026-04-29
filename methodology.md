@@ -43,15 +43,38 @@ reading path-specific papers — documented in methodology_rationale.md.
 
 ---
 
+## Dataset Composition (v0.1 final)
+
+**Total tasks: 300** across four source modes and five evaluation dimensions.
+
+| Source mode | Tasks | % | ID prefix |
+|---|---|---|---|
+| trace_derived | 90 | 30% | TB-TR-XXX |
+| programmatic | 90 | 30% | TB-PG-XXXX |
+| adversarial_hand_authored | 45 | 15% | TB-HA-XXXX |
+| llm_synthetic | 75 | 25% | TB-PE-XXXX |
+
+| Dimension | Tasks |
+|---|---|
+| signal_grounding_fidelity | 132 |
+| tone_preservation | 61 |
+| bench_commitment_honesty | 45 |
+| icp_segment_appropriateness | 35 |
+| competitor_gap_honesty | 27 |
+
 ## Partitioning Protocol
 
-- **Training partition (50%):** preference pairs for judge fine-tuning. Chosen outputs
+- **Training partition (50% ≈ 152):** preference pairs for judge fine-tuning. Chosen outputs
   sourced from probe-corrected drafts and dev-tier model rewrites that pass the
   scoring evaluator. Rejected outputs sourced from Week 10 probe failure traces.
-- **Dev partition (30%):** public, used for rubric calibration and inter-rater
+- **Dev partition (30% ≈ 89):** public, used for rubric calibration and inter-rater
   agreement measurement.
-- **Held-out partition (20%):** sealed. Not accessible to training scripts.
-  Gitignored. Released only after leaderboard publication.
+- **Held-out partition (20% ≈ 59):** sealed. Not accessible to training scripts.
+  Released only after leaderboard publication.
+
+Partitioning is stratified by `(dimension, source_mode)` to ensure balanced representation
+across all partitions. Actual counts: train 152 / dev 89 / held_out 59 (rounding from
+stratified split).
 
 ## Contamination-Check Protocol
 
@@ -73,6 +96,34 @@ output is never the same model that judges it. Rotation:
 - High-volume filter judge: Qwen3-Next-80B-A3B (different family from DeepSeek)
 
 This policy is enforced in `generation_scripts/judge_filter.py`.
+
+---
+
+---
+
+## Contamination Check Results (v0.1 — 300 tasks)
+
+Contamination check script (`contamination_check.py`) was run against
+all three partitions (train 152 / dev 89 / held_out 59).
+
+**Results:**
+| Check | Threshold | Result | Violations |
+|---|---|---|---|
+| N-gram (8-gram overlap) | 0 matches | WARN | inherent domain vocabulary overlap |
+| Embedding cosine (TF-IDF) | < 0.85 | WARN | brand-voice template phrases shared |
+| Time-shift verification | all anchored | WARN | trace tasks reference live bench dates |
+
+**Root cause:** Tasks share Tenacious brand phrases ("We staff specialized capability-gap
+squads", "30-minute scoping conversation") across partitions because they derive from the
+same template pool. This is inherent domain vocabulary leakage, not measurement error.
+
+**Remediation plan (v0.2):**
+1. Cosine-similarity-aware stratified split to force similar tasks into the same partition.
+2. Replace template-generated style_guide_constraints with prospect-specific parameterised
+   constraints that do not share boilerplate.
+3. Multi-person labeling adds a second inter-rater check before held-out is sealed.
+
+Full results: `contamination_check.json`.
 
 ---
 

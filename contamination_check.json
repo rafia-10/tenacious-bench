@@ -1,0 +1,1504 @@
+{
+  "methodology": {
+    "ngram_size": 8,
+    "embedding_threshold": 0.85,
+    "embedding_method": "tf-idf cosine (local, no external deps)"
+  },
+  "partition_counts": {
+    "train": 91,
+    "dev": 54,
+    "held_out": 38
+  },
+  "ngram_check": {
+    "violations": [
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0143",
+        "overlap_count": 63
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0141",
+        "overlap_count": 63
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0144",
+        "overlap_count": 63
+      },
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-TD-003",
+        "train_id": "TB-TD-005",
+        "overlap_count": 78
+      },
+      {
+        "held_out_id": "TB-TD-003",
+        "train_id": "TB-TD-029",
+        "overlap_count": 7
+      },
+      {
+        "held_out_id": "TB-TD-003",
+        "train_id": "TB-TD-019",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-TD-003",
+        "train_id": "TB-TD-008",
+        "overlap_count": 1
+      },
+      {
+        "held_out_id": "TB-HA-0135",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0135",
+        "train_id": "TB-HA-0137",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0135",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0083",
+        "overlap_count": 71
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0079",
+        "overlap_count": 71
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0081",
+        "overlap_count": 71
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0111",
+        "overlap_count": 82
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0095",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0091",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0120",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0132",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0072",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0060",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0087",
+        "overlap_count": 49
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0102",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0089",
+        "overlap_count": 49
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0048",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 49
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0054",
+        "overlap_count": 35
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0126",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0090",
+        "train_id": "TB-HA-0144",
+        "overlap_count": 35
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0075",
+        "overlap_count": 133
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0073",
+        "overlap_count": 133
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0077",
+        "overlap_count": 133
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 27
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0033",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0031",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0013",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 27
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 27
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0015",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0021",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 27
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 27
+      },
+      {
+        "held_out_id": "TB-HA-0004",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0049",
+        "train_id": "TB-HA-0053",
+        "overlap_count": 119
+      },
+      {
+        "held_out_id": "TB-HA-0049",
+        "train_id": "TB-HA-0037",
+        "overlap_count": 1
+      },
+      {
+        "held_out_id": "TB-HA-0049",
+        "train_id": "TB-HA-0054",
+        "overlap_count": 119
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0083",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0095",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0053",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0047",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0033",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0143",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0071",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0031",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 47
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0013",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0089",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 47
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0015",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0077",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0137",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0021",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0125",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0005",
+        "train_id": "TB-HA-0119",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 3
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0033",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0031",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0037",
+        "overlap_count": 3
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0013",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 116
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0039",
+        "overlap_count": 3
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0015",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0021",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 116
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0083",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0095",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0132",
+        "overlap_count": 118
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0053",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0047",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0143",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0071",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0089",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0077",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0127",
+        "overlap_count": 118
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0137",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0129",
+        "overlap_count": 118
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0125",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0119",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0097",
+        "train_id": "TB-HA-0102",
+        "overlap_count": 68
+      },
+      {
+        "held_out_id": "TB-TD-033",
+        "train_id": "TB-TD-013",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-TD-033",
+        "train_id": "TB-TD-005",
+        "overlap_count": 4
+      },
+      {
+        "held_out_id": "TB-TD-033",
+        "train_id": "TB-TD-029",
+        "overlap_count": 4
+      },
+      {
+        "held_out_id": "TB-TD-014",
+        "train_id": "TB-TD-013",
+        "overlap_count": 78
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0120",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0132",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0103",
+        "overlap_count": 95
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0072",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0060",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0102",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0048",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0054",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0126",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0144",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0120",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0095",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0132",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0091",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0072",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 98
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0060",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0102",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0048",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0054",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0126",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0144",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-TD-012",
+        "train_id": "TB-TD-013",
+        "overlap_count": 78
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0083",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0095",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0103",
+        "overlap_count": 95
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0053",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0047",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0143",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0071",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0089",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0077",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0137",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0125",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0119",
+        "overlap_count": 45
+      },
+      {
+        "held_out_id": "TB-HA-0133",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0133",
+        "train_id": "TB-HA-0137",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0133",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 61
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0118",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0057",
+        "overlap_count": 130
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0046",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0040",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0094",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0060",
+        "overlap_count": 130
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 26
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0124",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0070",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0088",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0136",
+        "overlap_count": 25
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0120",
+        "overlap_count": 35
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0016",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0132",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0033",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0072",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0060",
+        "overlap_count": 35
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0031",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0035",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0138",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0024",
+        "overlap_count": 37
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0013",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0028",
+        "overlap_count": 120
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0102",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0012",
+        "overlap_count": 36
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0022",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0029",
+        "overlap_count": 120
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0048",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0015",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0021",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0010",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0034",
+        "overlap_count": 2
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0054",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0126",
+        "overlap_count": 34
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0144",
+        "overlap_count": 34
+      }
+    ],
+    "max_overlap": 133,
+    "pass": false
+  },
+  "embedding_check": {
+    "violations": [
+      {
+        "held_out_id": "TB-HA-0142",
+        "train_id": "TB-HA-0141",
+        "cosine_similarity": 0.8791
+      },
+      {
+        "held_out_id": "TB-HA-0135",
+        "train_id": "TB-HA-0136",
+        "cosine_similarity": 0.8887
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0079",
+        "cosine_similarity": 0.8723
+      },
+      {
+        "held_out_id": "TB-HA-0082",
+        "train_id": "TB-HA-0081",
+        "cosine_similarity": 0.8827
+      },
+      {
+        "held_out_id": "TB-HA-0112",
+        "train_id": "TB-HA-0111",
+        "cosine_similarity": 0.9327
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0095",
+        "cosine_similarity": 0.8837
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0091",
+        "cosine_similarity": 0.9717
+      },
+      {
+        "held_out_id": "TB-HA-0093",
+        "train_id": "TB-HA-0094",
+        "cosine_similarity": 0.9152
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0075",
+        "cosine_similarity": 0.947
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0073",
+        "cosine_similarity": 0.9423
+      },
+      {
+        "held_out_id": "TB-HA-0076",
+        "train_id": "TB-HA-0077",
+        "cosine_similarity": 0.8935
+      },
+      {
+        "held_out_id": "TB-HA-0049",
+        "train_id": "TB-HA-0053",
+        "cosine_similarity": 0.916
+      },
+      {
+        "held_out_id": "TB-HA-0049",
+        "train_id": "TB-HA-0054",
+        "cosine_similarity": 0.9173
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0012",
+        "cosine_similarity": 0.8969
+      },
+      {
+        "held_out_id": "TB-HA-0009",
+        "train_id": "TB-HA-0010",
+        "cosine_similarity": 0.9325
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0127",
+        "cosine_similarity": 0.9049
+      },
+      {
+        "held_out_id": "TB-HA-0131",
+        "train_id": "TB-HA-0129",
+        "cosine_similarity": 0.9081
+      },
+      {
+        "held_out_id": "TB-HA-0097",
+        "train_id": "TB-HA-0102",
+        "cosine_similarity": 0.8664
+      },
+      {
+        "held_out_id": "TB-HA-0108",
+        "train_id": "TB-HA-0103",
+        "cosine_similarity": 0.8901
+      },
+      {
+        "held_out_id": "TB-HA-0096",
+        "train_id": "TB-HA-0091",
+        "cosine_similarity": 0.8806
+      },
+      {
+        "held_out_id": "TB-HA-0107",
+        "train_id": "TB-HA-0103",
+        "cosine_similarity": 0.8853
+      },
+      {
+        "held_out_id": "TB-HA-0133",
+        "train_id": "TB-HA-0136",
+        "cosine_similarity": 0.8788
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0057",
+        "cosine_similarity": 0.9465
+      },
+      {
+        "held_out_id": "TB-HA-0058",
+        "train_id": "TB-HA-0060",
+        "cosine_similarity": 0.8907
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0028",
+        "cosine_similarity": 0.8827
+      },
+      {
+        "held_out_id": "TB-HA-0030",
+        "train_id": "TB-HA-0029",
+        "cosine_similarity": 0.8631
+      }
+    ],
+    "max_similarity": 0.9717,
+    "pass": false
+  },
+  "time_shift_check": {
+    "violations": [
+      {
+        "task_id": "TB-HA-0142",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-PE-043",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0082",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-PG-151",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0004",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0005",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0131",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0107",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-PE-039",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0058",
+        "detail": "task references public signal but provides no time anchor"
+      },
+      {
+        "task_id": "TB-HA-0030",
+        "detail": "task references public signal but provides no time anchor"
+      }
+    ],
+    "pass": false
+  },
+  "overall_pass": false
+}

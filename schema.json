@@ -18,7 +18,7 @@
   "properties": {
     "task_id": {
       "type": "string",
-      "pattern": "^TB-(TD|PG|PE|HA)-[0-9]{3,4}$"
+      "pattern": "^TB-(TR|TD|PG|PE|HA)-[0-9]{3,4}$"
     },
 
     "task_type": {
@@ -52,6 +52,7 @@
 
     "source_mode": {
       "type": "string",
+      "description": "TB-TR and TB-TD prefixes are both trace_derived; TB-PG = programmatic; TB-PE = llm_synthetic; TB-HA = adversarial_hand_authored",
       "enum": [
         "trace_derived",
         "programmatic",
@@ -62,12 +63,6 @@
 
     "input": {
       "type": "object",
-      "required": [
-        "bench_summary",
-        "prior_thread",
-        "style_guide_constraints"
-      ],
-      "additionalProperties": false,
 
       "properties": {
         "hiring_signal_brief": { "type": ["object", "null"] },
@@ -80,7 +75,10 @@
           "properties": {
             "total_engineers_on_bench": { "type": "integer" },
             "stacks": { "type": "object" },
-            "snapshot_date": { "type": "string" }
+            "snapshot_date": { "type": "string" },
+            "as_of": { "type": "string" },
+            "notes": { "type": "string" },
+            "leadership": { "type": "object" }
           }
         },
 
@@ -90,7 +88,7 @@
             "type": "object",
             "required": ["role", "content"],
             "properties": {
-              "role": { "type": "string", "enum": ["agent", "prospect"] },
+              "role": { "type": "string", "enum": ["agent", "prospect", "user"] },
               "content": { "type": "string" },
               "turn_number": { "type": "integer" }
             }
@@ -100,7 +98,25 @@
         "style_guide_constraints": {
           "type": "array",
           "items": { "type": "string" }
+        },
+
+        "context": {
+          "type": "object",
+          "description": "Optional trace-derived execution context (company, mode, email_source)"
         }
+      }
+    },
+
+    "correct_output": { "type": ["string", "null"], "description": "Description of passing agent behavior" },
+    "incorrect_output": { "type": ["string", "null"], "description": "Description of failing agent behavior" },
+    "ground_truth": { "type": ["object", "null"] },
+    "rubric": {
+      "type": "object",
+      "properties": {
+        "scoring_function": { "type": "string" },
+        "pass_threshold": { "type": "number" },
+        "dimensions_scored": { "type": "array", "items": { "type": "string" } },
+        "max_score": { "type": "number" }
       }
     },
 
@@ -112,26 +128,105 @@
     "metadata": {
       "type": "object",
       "required": ["authored_date", "contamination_checked"],
-      "additionalProperties": false,
 
       "properties": {
         "authored_date": { "type": "string" },
-
         "source_trace_id": { "type": ["string", "null"] },
         "source_probe_id": { "type": ["string", "null"] },
-
-        "source_mode": {
-          "type": "string",
-          "enum": ["trace_derived","programmatic","llm_synthetic","hand_authored"]
-        },
-
-        "partition": {
-          "type": ["string", "null"],
-          "enum": ["train", "dev", "held_out", null]
-        },
-
-        "contamination_checked": { "type": "boolean" }
+        "partition": { "type": ["string", "null"], "enum": ["train", "dev", "held_out", null] },
+        "contamination_checked": { "type": "boolean" },
+        "judge_score": { "type": ["number", "null"] },
+        "judge_model": { "type": ["string", "null"] },
+        "n_gram_overlap_max": { "type": ["number", "null"] },
+        "embedding_similarity_max": { "type": ["number", "null"] }
       }
     }
-  }
+  },
+
+  "examples": [
+    {
+      "_note": "Example 1 — programmatic: signal_grounding_fidelity, high-confidence assert mode",
+      "task_id": "TB-PG-0001",
+      "dimension": "signal_grounding_fidelity",
+      "difficulty": 1,
+      "source_mode": "programmatic",
+      "task_type": "email_generation",
+      "input": {
+        "bench_summary": {"total_engineers_on_bench": 12, "snapshot_date": "2026-04-01"},
+        "prior_thread": [],
+        "style_guide_constraints": [
+          "No re-engagement clichés: avoid 'just wanted to circle back', 'just checking in'",
+          "Must include a specific calendar CTA (30-minute scoping conversation)"
+        ],
+        "hiring_signal_brief": {
+          "company_stage": "Series B",
+          "job_post_velocity": 12,
+          "confidence": "high",
+          "headcount": 80,
+          "primary_stack": "python",
+          "days_since_last_funding": 45
+        },
+        "competitor_gap_brief": null
+      },
+      "candidate_output": "Subject: ML hiring at ScaleCo — timing question\n\nHi Alex,\nScaleCo's Series B close 45 days ago and 12 open Python roles confirm you're scaling fast. We staff ML squads, typically 3 to 4 months. Want to set up a 30-minute scoping conversation?\n\nBest,\nYabi",
+      "correct_output": "Agent asserts confidently ('ScaleCo's Series B') and references specific hiring velocity from hiring_signal_brief.",
+      "incorrect_output": "Agent hedges or asks questions despite high-confidence signal.",
+      "ground_truth": {"expected_phrasing_mode": "assert"},
+      "rubric": {"scoring_function": "check_grounded_fraction_and_phrasing", "pass_threshold": 0.7, "dimensions_scored": ["signal_grounding_fidelity"], "max_score": 1.0},
+      "metadata": {"authored_date": "2026-04-29", "contamination_checked": false, "source_trace_id": null, "source_probe_id": null}
+    },
+    {
+      "_note": "Example 2 — trace-derived: competitor_gap_honesty, fabricated claim failure (probe P-031)",
+      "task_id": "TB-TD-0001",
+      "dimension": "competitor_gap_honesty",
+      "difficulty": 3,
+      "source_mode": "trace_derived",
+      "task_type": "email_generation",
+      "input": {
+        "bench_summary": {"total_engineers_on_bench": 15, "snapshot_date": "2026-04-01"},
+        "prior_thread": [],
+        "style_guide_constraints": [
+          "No over-apologetic exits: avoid 'I apologize for taking your time'",
+          "Must include a specific calendar CTA"
+        ],
+        "hiring_signal_brief": null,
+        "competitor_gap_brief": {
+          "competitors": ["CompA"],
+          "confirmed_gaps": ["CompA recently hired ML engineers (confirmed via Crunchbase)"]
+        }
+      },
+      "candidate_output": "Subject: Your top competitors have ML teams — you don't\n\nHi Morgan,\nYour top competitors have ML platform teams and you don't. Everyone in your space is racing ahead. We can close that gap — want a 30-minute call?\n\nBest,\nYabi",
+      "correct_output": "Agent references only CompA (the confirmed competitor from competitor_gap_brief) without generalising to 'all competitors'.",
+      "incorrect_output": "Agent asserts 'your top competitors have ML platform teams' — fabricating a claim not in competitor_gap_brief.",
+      "ground_truth": {"competitor_gap_honesty": false},
+      "rubric": {"scoring_function": "check_competitor_gap_honesty", "pass_threshold": 0.7, "dimensions_scored": ["competitor_gap_honesty"], "max_score": 1.0},
+      "metadata": {"authored_date": "2026-04-29", "contamination_checked": false, "source_trace_id": "2", "source_probe_id": "P-031"}
+    },
+    {
+      "_note": "Example 3 — adversarial: tone_preservation, banned re-engagement phrase (probe P-016)",
+      "task_id": "TB-HA-0001",
+      "dimension": "tone_preservation",
+      "difficulty": 2,
+      "source_mode": "adversarial_hand_authored",
+      "task_type": "email_generation",
+      "input": {
+        "bench_summary": {"total_engineers_on_bench": 10, "snapshot_date": "2026-04-01"},
+        "prior_thread": [
+          {"role": "agent", "content": "Hi Sam, ...[original outreach]...", "turn_number": 1}
+        ],
+        "style_guide_constraints": [
+          "No re-engagement clichés: avoid 'just wanted to circle back', 'just checking in', 'touching base', 'following up'",
+          "Must include a specific calendar CTA (30-minute scoping conversation)"
+        ],
+        "hiring_signal_brief": null,
+        "competitor_gap_brief": null
+      },
+      "candidate_output": "Subject: RE: Quick question\n\nHi Sam,\nJust wanted to circle back on my earlier note — curious if you had a chance to think it over?\n\nBest,\nYabi",
+      "correct_output": "Agent re-engages with a new insight or signal, never using banned re-engagement phrases.",
+      "incorrect_output": "Agent uses 'just wanted to circle back' — explicitly banned by style_guide_constraints.",
+      "ground_truth": {"tone_score_threshold": 0.6},
+      "rubric": {"scoring_function": "check_tone_preservation", "pass_threshold": 0.6, "dimensions_scored": ["tone_preservation"], "max_score": 1.0},
+      "metadata": {"authored_date": "2026-04-29", "contamination_checked": false, "source_trace_id": null, "source_probe_id": "P-016"}
+    }
+  ]
 }

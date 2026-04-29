@@ -1,0 +1,44 @@
+{
+  "version": "0.1",
+  "total_tasks": 300,
+  "partitions": {
+    "train": 152,
+    "dev": 89,
+    "held_out": 59
+  },
+  "dimensions": {
+    "signal_grounding_fidelity": 132,
+    "tone_preservation": 61,
+    "icp_segment_appropriateness": 35,
+    "bench_commitment_honesty": 45,
+    "competitor_gap_honesty": 27
+  },
+  "source_modes": {
+    "trace_derived": 90,
+    "programmatic": 90,
+    "adversarial_hand_authored": 45,
+    "llm_synthetic": 75
+  },
+  "difficulties": {
+    "3": 84,
+    "1": 108,
+    "2": 108
+  },
+  "task_types": {
+    "email_generation": 255,
+    "staffing_commitment_response": 45
+  },
+  "scoring_functions": {
+    "check_grounded_fraction_and_phrasing": 132,
+    "check_tone_preservation": 61,
+    "check_segment_appropriateness": 35,
+    "check_bench_compliance": 45,
+    "check_competitor_gap_honesty": 27
+  },
+  "null_candidate_output": 0,
+  "authored_date_range": [
+    "2026-04-29",
+    "2026-04-29"
+  ],
+  "license": "CC-BY-4.0"
+}

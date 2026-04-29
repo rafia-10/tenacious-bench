@@ -1,0 +1,15 @@
+# Tenacious-Bench v0.1 — evaluation dependencies
+# No GPU required for scoring_evaluator.py or contamination_check.py
+# Python 3.11+
+
+# Training (Acts III-IV only — not needed for evaluation)
+# torch>=2.1.0
+# transformers>=4.40.0
+# peft>=0.10.0
+# trl>=0.8.0
+# accelerate>=0.28.0
+# datasets>=2.19.0
+# bitsandbytes>=0.43.0
+
+# All evaluation scripts run on stdlib only (no extra pip installs needed)
+# Optional: set OPENROUTER_API_KEY for LLM-judge mode in judge_filter.py
