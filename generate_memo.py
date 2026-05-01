@@ -60,25 +60,25 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
     doc = SimpleDocTemplate(
         str(OUTPUT_PDF),
         pagesize=letter,
-        leftMargin=0.75 * inch,
-        rightMargin=0.75 * inch,
-        topMargin=0.5 * inch,
-        bottomMargin=0.6 * inch,
+        leftMargin=0.6 * inch,
+        rightMargin=0.6 * inch,
+        topMargin=0.4 * inch,
+        bottomMargin=0.4 * inch,
     )
 
     styles = getSampleStyleSheet()
-    h1 = ParagraphStyle("H1", fontSize=14, textColor=NAVY, spaceAfter=4,
-                         fontName="Helvetica-Bold", leading=18)
-    h2 = ParagraphStyle("H2", fontSize=10, textColor=TEAL, spaceAfter=3,
-                         fontName="Helvetica-Bold", leading=14)
-    body = ParagraphStyle("Body", fontSize=8, textColor=DARK_GRAY, spaceAfter=4,
-                           fontName="Helvetica", leading=12)
-    footnote = ParagraphStyle("Footnote", fontSize=6.5, textColor=colors.gray, spaceAfter=2,
-                               fontName="Helvetica-Oblique", leading=9)
-    header_center = ParagraphStyle("HeaderCenter", fontSize=16, textColor=WHITE,
-                                    fontName="Helvetica-Bold", alignment=TA_CENTER, leading=20)
-    subtitle = ParagraphStyle("Subtitle", fontSize=8, textColor=WHITE,
-                               fontName="Helvetica", alignment=TA_CENTER, leading=12)
+    h1 = ParagraphStyle("H1", fontSize=13, textColor=NAVY, spaceAfter=2,
+                         fontName="Helvetica-Bold", leading=16)
+    h2 = ParagraphStyle("H2", fontSize=9.5, textColor=TEAL, spaceAfter=2,
+                         fontName="Helvetica-Bold", leading=12)
+    body = ParagraphStyle("Body", fontSize=8, textColor=DARK_GRAY, spaceAfter=2,
+                           fontName="Helvetica", leading=11)
+    footnote = ParagraphStyle("Footnote", fontSize=6, textColor=colors.gray, spaceAfter=1,
+                               fontName="Helvetica-Oblique", leading=8)
+    header_center = ParagraphStyle("HeaderCenter", fontSize=15, textColor=WHITE,
+                                    fontName="Helvetica-Bold", alignment=TA_CENTER, leading=18)
+    subtitle = ParagraphStyle("Subtitle", fontSize=7.5, textColor=WHITE,
+                               fontName="Helvetica", alignment=TA_CENTER, leading=11)
 
     story = []
 
@@ -124,7 +124,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
         "Tenacious-Bench v0.1 — Decision Memo",
         "Conversion Engine Judge Training Report · 2026-05-01"
     ))
-    story.append(Spacer(1, 0.12 * inch))
+    story.append(Spacer(1, 0.08 * inch))
 
     # Executive summary
     story.append(Paragraph("Executive Summary", h1))
@@ -145,7 +145,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
         f"<b>Recommendation:</b> See deployment table below."
     )
     story.append(Paragraph(exec_text, body))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     # Delta A table
     story.append(Paragraph("Delta A — Trained Judge vs. Week 10 Baseline¹", h2))
@@ -163,7 +163,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
     story.append(Paragraph(
         "¹ Source: ablations/ablation_results.json/delta_a; bootstrap_test.py seed=42, 10,000 iterations",
         footnote))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     # Delta B table
     story.append(Paragraph("Delta B — Trained Judge vs. Prompt-Only Judge²", h2))
@@ -186,7 +186,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
         "² Source: ablations/ablation_results.json/delta_b. If finding=prompt_engineering_sufficient, "
         "prompting is a viable lower-cost alternative at this training scale.",
         footnote))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     # Cost table
     story.append(Paragraph("Cost Per Task³", h2))
@@ -210,7 +210,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
     ]))
     story.append(t)
     story.append(Paragraph("³ Source: ablations/held_out_traces.jsonl latency_ms × compute rate", footnote))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     # Deployment decision
     story.append(Paragraph("Deployment Recommendation⁴", h2))
@@ -245,7 +245,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
         "Tenacious-Bench v0.1 — The Skeptic's Appendix",
         "Four gaps v0.1 cannot capture · Unresolved training failure · Kill-switch trigger"
     ))
-    story.append(Spacer(1, 0.12 * inch))
+    story.append(Spacer(1, 0.08 * inch))
 
     story.append(Paragraph("Four Failure Modes Tenacious-Bench v0.1 Does Not Capture", h1))
     gaps_rows = [
@@ -279,7 +279,7 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
         ("WORDWRAP", (0, 0), (-1, -1), True),
     ]))
     story.append(t)
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     story.append(Paragraph("Public-Signal Lossiness in Ground Truth⁵", h2))
     gt_text = (
@@ -294,13 +294,13 @@ def make_pdf(vals: dict, ablations: dict, eg: dict):
     )
     story.append(Paragraph(gt_text, body))
     story.append(Paragraph("⁵ Source: inter_rater_agreement.md section 3; probe P-005, P-006", footnote))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     story.append(Paragraph("Honest Unresolved Training Failure⁶", h2))
     db_txt = ablations.get("delta_b", {}).get("finding_explanation", "Ablations not yet run.") if ablations else "Ablations not yet run."
     story.append(Paragraph(db_txt[:600], body))
     story.append(Paragraph("⁶ Source: ablations/ablation_results.json/delta_b/finding_explanation", footnote))
-    story.append(Spacer(1, 0.08 * inch))
+    story.append(Spacer(1, 0.05 * inch))
 
     story.append(Paragraph("Kill-Switch Trigger⁷", h2))
     ks_text = (
