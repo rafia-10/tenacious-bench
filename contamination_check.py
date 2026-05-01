@@ -125,9 +125,12 @@ def run_checks():
     held_out_tasks = load_partition("held_out")
 
     train_texts = {t["task_id"]: task_to_text(t) for t in train_tasks}
+    dev_texts = {t["task_id"]: task_to_text(t) for t in dev_tasks}
     held_out_texts = {t["task_id"]: task_to_text(t) for t in held_out_tasks}
+    
+    comparison_texts = {**train_texts, **dev_texts}
 
-    all_texts = list(train_texts.values()) + list(held_out_texts.values())
+    all_texts = list(train_texts.values()) + list(dev_texts.values()) + list(held_out_texts.values())
     idf_vocab = build_idf(all_texts)
 
     results = {
@@ -135,32 +138,33 @@ def run_checks():
             "ngram_size": NGRAM_SIZE,
             "embedding_threshold": EMBEDDING_THRESHOLD,
             "embedding_method": "tf-idf cosine (local, no external deps)",
+            "coverage": "held_out vs train and held_out vs dev"
         },
         "partition_counts": {
             "train": len(train_tasks),
             "dev": len(dev_tasks),
             "held_out": len(held_out_tasks),
         },
-        "ngram_check": {"violations": [], "max_overlap": 0, "pass": True},
-        "embedding_check": {"violations": [], "max_similarity": 0.0, "pass": True},
+        "ngram_check": {"violations": [], "max_overlap": 0, "pass": True, "coverage": "held-out compared against train and dev"},
+        "embedding_check": {"violations": [], "max_similarity": 0.0, "pass": True, "coverage": "held-out compared against train and dev"},
         "time_shift_check": {"violations": [], "pass": True},
         "overall_pass": True,
     }
 
     # ── Check 1: N-gram overlap ──────────────────────────────────────────────
-    print(f"Running {NGRAM_SIZE}-gram overlap check ({len(held_out_tasks)} held-out x {len(train_tasks)} train)...")
-    train_ngrams = {tid: get_ngrams(text, NGRAM_SIZE) for tid, text in train_texts.items()}
+    print(f"Running {NGRAM_SIZE}-gram overlap check ({len(held_out_tasks)} held-out x {len(comparison_texts)} comparison)...")
+    comparison_ngrams = {tid: get_ngrams(text, NGRAM_SIZE) for tid, text in comparison_texts.items()}
 
     for h_id, h_text in held_out_texts.items():
         h_ngrams = get_ngrams(h_text, NGRAM_SIZE)
         if not h_ngrams:
             continue
-        for t_id, t_ngrams in train_ngrams.items():
-            overlap = len(h_ngrams & t_ngrams)
+        for c_id, c_ngrams in comparison_ngrams.items():
+            overlap = len(h_ngrams & c_ngrams)
             if overlap > 0:
                 results["ngram_check"]["violations"].append({
                     "held_out_id": h_id,
-                    "train_id": t_id,
+                    "comparison_id": c_id,
                     "overlap_count": overlap,
                 })
                 results["ngram_check"]["max_overlap"] = max(
@@ -169,21 +173,21 @@ def run_checks():
                 results["ngram_check"]["pass"] = False
 
     if results["ngram_check"]["pass"]:
-        print(f"  PASS: no {NGRAM_SIZE}-gram overlap between held-out and train")
+        print(f"  PASS: no {NGRAM_SIZE}-gram overlap between held-out and train/dev")
     else:
         n_viol = len(results["ngram_check"]["violations"])
-        print(f"  WARN: {n_viol} held-out/train pairs have {NGRAM_SIZE}-gram overlap")
+        print(f"  WARN: {n_viol} held-out/comparison pairs have {NGRAM_SIZE}-gram overlap")
 
     # ── Check 2: Embedding similarity ────────────────────────────────────────
     print(f"Running embedding similarity check (threshold={EMBEDDING_THRESHOLD})...")
     max_sim = 0.0
     for h_id, h_text in held_out_texts.items():
-        for t_id, t_text in train_texts.items():
-            sim = tfidf_cosine(h_text, t_text, idf_vocab)
+        for c_id, c_text in comparison_texts.items():
+            sim = tfidf_cosine(h_text, c_text, idf_vocab)
             if sim > EMBEDDING_THRESHOLD:
                 results["embedding_check"]["violations"].append({
                     "held_out_id": h_id,
-                    "train_id": t_id,
+                    "comparison_id": c_id,
                     "cosine_similarity": round(sim, 4),
                 })
                 results["embedding_check"]["pass"] = False

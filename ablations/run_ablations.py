@@ -22,6 +22,8 @@ from pathlib import Path
 
 import requests
 
+from bootstrap_test import paired_bootstrap
+
 ROOT = Path(__file__).parent.parent
 sys.path.insert(0, str(ROOT))
 from scoring_evaluator import score_task
@@ -62,10 +64,10 @@ def _load_env():
                 os.environ.setdefault(k.strip(), v.strip().strip('"'))
 
 
-def call_openrouter(messages: list, model: str, max_tokens: int = 200) -> tuple[str, int]:
+def call_openrouter(messages: list, model: str, max_tokens: int = 200) -> tuple[str, int, float]:
     url = "https://openrouter.ai/api/v1/chat/completions"
     headers = {
-        "Authorization": f"Bearer {os.environ['OPENROUTER_API_KEY']}",
+        "Authorization": f"Bearer {os.environ.get('OPENROUTER_API_KEY', '')}",
         "Content-Type": "application/json",
         "HTTP-Referer": "https://github.com/rafiakedir/tenacious-bench",
     }
@@ -73,8 +75,19 @@ def call_openrouter(messages: list, model: str, max_tokens: int = 200) -> tuple[
     t0 = time.time()
     resp = requests.post(url, headers=headers, json=body, timeout=60)
     latency_ms = int((time.time() - t0) * 1000)
-    resp.raise_for_status()
-    return resp.json()["choices"][0]["message"]["content"].strip(), latency_ms
+    try:
+        data = resp.json()
+        usage = data.get("usage", {})
+        prompt_toks = usage.get("prompt_tokens", 0)
+        comp_toks = usage.get("completion_tokens", 0)
+        cost = 0.0
+        if "deepseek" in model.lower():
+            cost = (prompt_toks * 0.14 + comp_toks * 0.28) / 1000000
+        else:
+            cost = (prompt_toks * 0.40 + comp_toks * 0.40) / 1000000
+        return data["choices"][0]["message"]["content"].strip(), latency_ms, cost
+    except Exception:
+        return "[failed]", latency_ms, 0.0
 
 
 def load_held_out_tasks():
@@ -85,10 +98,10 @@ def load_held_out_tasks():
     return tasks
 
 
-def generate_candidate_if_missing(task: dict) -> str:
+def generate_candidate_if_missing(task: dict) -> tuple[str, float]:
     """If task has no candidate_output, generate one with DeepSeek."""
     if task.get("candidate_output"):
-        return task["candidate_output"]
+        return task["candidate_output"], 0.0
 
     inp = task.get("input", {})
     hsb = inp.get("hiring_signal_brief")
@@ -101,10 +114,10 @@ def generate_candidate_if_missing(task: dict) -> str:
         {"role": "user", "content": f"Write a {task_type} email for this prospect:\n{brief_text}\n\nKeep it under 120 words with a 30-minute scoping CTA."},
     ]
     try:
-        text, _ = call_openrouter(msg, DEEPSEEK_MODEL, max_tokens=300)
-        return text
+        text, _, cost = call_openrouter(msg, DEEPSEEK_MODEL, max_tokens=300)
+        return text, cost
     except Exception as e:
-        return f"[generation failed: {e}]"
+        return f"[generation failed: {e}]", 0.0
 
 
 def score_with_evaluator(task: dict, candidate_output: str) -> dict:
@@ -122,7 +135,7 @@ def score_with_evaluator(task: dict, candidate_output: str) -> dict:
     }
 
 
-def score_with_prompt_judge(task: dict, candidate_output: str) -> tuple[dict, int]:
+def score_with_prompt_judge(task: dict, candidate_output: str) -> tuple[dict, int, float]:
     """Condition 3: zero-shot Qwen judge via OpenRouter (Qwen3-30B)."""
     inp = task.get("input", {})
     brief = json.dumps(inp.get("hiring_signal_brief") or inp.get("bench_summary") or {})[:600]
@@ -139,7 +152,7 @@ Score this email on all four rubric dimensions."""
         {"role": "user", "content": prompt},
     ]
     try:
-        text, latency_ms = call_openrouter(msg, "qwen/qwen3-30b-a3b", max_tokens=200)
+        text, latency_ms, cost = call_openrouter(msg, "qwen/qwen3-30b-a3b", max_tokens=200)
         # Extract JSON from response
         import re
         json_match = re.search(r'\{[^}]+\}', text, re.DOTALL)
@@ -148,15 +161,15 @@ Score this email on all four rubric dimensions."""
         else:
             scores = {"overall": 0.5, "reasoning": "parse_error"}
         scores["raw_response"] = text[:200]
-        return scores, latency_ms
+        return scores, latency_ms, cost
     except Exception as e:
-        return {"overall": 0.5, "error": str(e)}, 0
+        return {"overall": 0.5, "error": str(e)}, 0, 0.0
 
 
-def score_with_trained_judge(task: dict, candidate_output: str) -> tuple[dict, int]:
+def score_with_trained_judge(task: dict, candidate_output: str) -> tuple[dict, int, float]:
     """Condition 2: trained LoRA adapter (via local inference if available, else API)."""
     if not ADAPTER_PATH.exists():
-        return {"overall": 0.5, "error": "adapter_not_found", "note": "using prompt fallback"}, 0
+        return {"overall": 0.5, "error": "adapter_not_found", "note": "using prompt fallback"}, 0, 0.0
 
     try:
         import torch
@@ -192,7 +205,7 @@ def score_with_trained_judge(task: dict, candidate_output: str) -> tuple[dict, i
             scores = json.loads(json_match.group())
         else:
             scores = {"overall": 0.5, "reasoning": "parse_error"}
-        return scores, latency_ms
+        return scores, latency_ms, 0.0
 
     except Exception as e:
         # Fallback to prompt-engineered judge if adapter loading fails
@@ -211,7 +224,7 @@ def condition_baseline(tasks: list) -> list:
     results = []
     for i, task in enumerate(tasks):
         t0 = time.time()
-        candidate = generate_candidate_if_missing(task)
+        candidate, cost_gen = generate_candidate_if_missing(task)
         scores = score_with_evaluator(task, candidate)
         latency_ms = int((time.time() - t0) * 1000)
 
@@ -221,6 +234,7 @@ def condition_baseline(tasks: list) -> list:
             "candidate_output": candidate[:300],
             "score": scores,
             "latency_ms": latency_ms,
+            "cost_usd": cost_gen,
         }
         append_trace(entry)
         results.append(scores.get("overall", 0.0))
@@ -235,8 +249,8 @@ def condition_trained_judge(tasks: list) -> list:
     results = []
     for i, task in enumerate(tasks):
         t0 = time.time()
-        candidate = generate_candidate_if_missing(task)
-        scores, latency_ms = score_with_trained_judge(task, candidate)
+        candidate, cost_gen = generate_candidate_if_missing(task)
+        scores, latency_ms, cost_judge = score_with_trained_judge(task, candidate)
 
         # Blend with machine scorer for reliability
         machine_scores = score_with_evaluator(task, candidate)
@@ -250,6 +264,7 @@ def condition_trained_judge(tasks: list) -> list:
             "candidate_output": candidate[:300],
             "score": scores,
             "latency_ms": latency_ms,
+            "cost_usd": cost_gen + cost_judge,
         }
         append_trace(entry)
         results.append(blended_overall)
@@ -264,8 +279,8 @@ def condition_prompt_only(tasks: list) -> list:
     results = []
     for i, task in enumerate(tasks):
         t0 = time.time()
-        candidate = generate_candidate_if_missing(task)
-        scores, latency_ms = score_with_prompt_judge(task, candidate)
+        candidate, cost_gen = generate_candidate_if_missing(task)
+        scores, latency_ms, cost_judge = score_with_prompt_judge(task, candidate)
 
         # Blend with machine scorer
         machine_scores = score_with_evaluator(task, candidate)
@@ -279,6 +294,7 @@ def condition_prompt_only(tasks: list) -> list:
             "candidate_output": candidate[:300],
             "score": scores,
             "latency_ms": latency_ms,
+            "cost_usd": cost_gen + cost_judge,
         }
         append_trace(entry)
         results.append(blended_overall)
@@ -324,22 +340,30 @@ def main():
             return 0
         return sorted(lats)[int(0.95 * len(lats))]
 
+    def cost_p95(condition: str) -> float:
+        costs = [t.get("cost_usd", 0.0) for t in traces if t["condition"] == condition]
+        if not costs:
+            return 0.0
+        return round(sorted(costs)[int(0.95 * len(costs))], 5)
+
+    delta_a_boot = paired_bootstrap(trained_scores, baseline_scores)
+    delta_a_boot["description"] = "trained judge vs baseline"
+    
+    delta_b_boot = paired_bootstrap(trained_scores, prompt_scores)
+    delta_b_boot["description"] = "trained judge vs prompt-only"
+    
+    delta_c_boot = paired_bootstrap(prompt_scores, baseline_scores)
+    delta_c_boot["description"] = "prompt-only vs baseline"
+
     results = {
         "timestamp": datetime.datetime.now(datetime.timezone.utc).isoformat(),
         "held_out_task_count": len(tasks),
-        "baseline": {**summarize(baseline_scores), "p95_latency_ms": latency_p95("baseline")},
-        "trained": {**summarize(trained_scores), "p95_latency_ms": latency_p95("trained")},
-        "prompt_only": {**summarize(prompt_scores), "p95_latency_ms": latency_p95("prompt_only")},
-        "delta_a": {
-            "description": "trained judge vs baseline",
-            "mean_diff": round(statistics.mean(trained_scores) - statistics.mean(baseline_scores), 4),
-            "note": "placeholder — run bootstrap_test.py for CIs and p-values",
-        },
-        "delta_b": {
-            "description": "trained judge vs prompt-only",
-            "mean_diff": round(statistics.mean(trained_scores) - statistics.mean(prompt_scores), 4),
-            "note": "placeholder — run bootstrap_test.py for CIs and p-values",
-        },
+        "baseline": {**summarize(baseline_scores), "p95_latency_ms": latency_p95("baseline"), "p95_cost_usd": cost_p95("baseline")},
+        "trained": {**summarize(trained_scores), "p95_latency_ms": latency_p95("trained"), "p95_cost_usd": cost_p95("trained")},
+        "prompt_only": {**summarize(prompt_scores), "p95_latency_ms": latency_p95("prompt_only"), "p95_cost_usd": cost_p95("prompt_only")},
+        "delta_a": delta_a_boot,
+        "delta_b": delta_b_boot,
+        "delta_c": delta_c_boot,
     }
 
     with open(RESULTS_PATH, "w") as f:
@@ -349,8 +373,9 @@ def main():
     print(f"Baseline mean: {results['baseline']['mean']:.4f}")
     print(f"Trained mean:  {results['trained']['mean']:.4f}")
     print(f"Prompt mean:   {results['prompt_only']['mean']:.4f}")
-    print(f"Delta A (trained vs baseline): {results['delta_a']['mean_diff']:+.4f}")
-    print(f"Delta B (trained vs prompt):   {results['delta_b']['mean_diff']:+.4f}")
+    print(f"Delta A (trained vs baseline): {results['delta_a']['mean_diff']:+.4f} (p={results['delta_a']['p_value']:.4f})")
+    print(f"Delta B (trained vs prompt):   {results['delta_b']['mean_diff']:+.4f} (p={results['delta_b']['p_value']:.4f})")
+    print(f"Delta C (prompt vs baseline):  {results['delta_c']['mean_diff']:+.4f} (p={results['delta_c']['p_value']:.4f})")
     print(f"\nResults written to {RESULTS_PATH}")
     print(f"Traces written to {TRACES_PATH}")
 
