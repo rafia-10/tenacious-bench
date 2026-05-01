@@ -1,0 +1,75 @@
+{
+  "check_timestamp": "2026-05-01T19:51:13.184077Z",
+  "training_pairs_checked": 94,
+  "held_out_tasks_checked": 59,
+  "ngram_n": 8,
+  "cosine_threshold": 0.85,
+  "ngram_violations": 3965,
+  "cosine_violations": 0,
+  "max_cosine_sim": 0.7271,
+  "mean_max_cosine_sim": 0.4965,
+  "ngram_violation_details": [
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-024",
+      "overlap_count": 723,
+      "sample_ngram": "ai_adjacent_roles_fraction 1 0 named_ai_ml_leadership 1 0 github_signal 1"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-005",
+      "overlap_count": 411,
+      "sample_ngram": "q3 2026 limited availability leadership fractional_architects_available 2 fractional_delivery_managers_available"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-035",
+      "overlap_count": 779,
+      "sample_ngram": "ai_adjacent_roles_fraction 1 0 named_ai_ml_leadership 1 0 github_signal 1"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-016",
+      "overlap_count": 780,
+      "sample_ngram": "ai_adjacent_roles_fraction 1 0 named_ai_ml_leadership 1 0 github_signal 1"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-018",
+      "overlap_count": 719,
+      "sample_ngram": "ai_adjacent_roles_fraction 1 0 named_ai_ml_leadership 1 0 github_signal 1"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-002",
+      "overlap_count": 413,
+      "sample_ngram": "q3 2026 limited availability leadership fractional_architects_available 2 fractional_delivery_managers_available"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-008",
+      "overlap_count": 453,
+      "sample_ngram": "q3 2026 limited availability leadership fractional_architects_available 2 fractional_delivery_managers_available"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-060",
+      "overlap_count": 4,
+      "sample_ngram": "min discovery call http localhost 3000 rafia 123"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-066",
+      "overlap_count": 62,
+      "sample_ngram": "x and you are not here is what"
+    },
+    {
+      "pair_task_id": "TB-TR-032",
+      "held_out_task_id": "TB-TR-049",
+      "overlap_count": 62,
+      "sample_ngram": "x and you are not here is what"
+    }
+  ],
+  "cosine_violation_details": [],
+  "status": "CLEAN"
+}

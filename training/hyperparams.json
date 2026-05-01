@@ -1,0 +1,41 @@
+{
+  "model_id": "unsloth/Qwen2.5-1.5B-Instruct",
+  "training_algorithm": "ORPO",
+  "lora": {
+    "r": 16,
+    "lora_alpha": 32,
+    "target_modules": ["q_proj", "v_proj"],
+    "lora_dropout": 0.05,
+    "bias": "none",
+    "task_type": "CAUSAL_LM"
+  },
+  "orpo_trainer": {
+    "learning_rate": 8e-6,
+    "per_device_train_batch_size": 2,
+    "gradient_accumulation_steps": 4,
+    "effective_batch_size": 8,
+    "num_train_epochs": 3,
+    "warmup_ratio": 0.1,
+    "lr_scheduler_type": "cosine",
+    "beta": 0.1,
+    "max_length": 1024,
+    "max_prompt_length": 512,
+    "logging_steps": 10,
+    "save_steps": 50,
+    "seed": 42
+  },
+  "precision": {
+    "bf16": false,
+    "fp16": true,
+    "note": "T4 GPU: fp16 only. Switch to bf16 on A100/4090."
+  },
+  "adapter_output_dir": "training/adapter",
+  "hub_model_id": "rafiakedir/tenacious-bench-adapter",
+  "fixed_seed": 42,
+  "rationale": {
+    "orpo_vs_dpo": "ORPO chosen over DPO because it requires no reference model, reducing GPU memory footprint by ~40% on T4. Reference-free approach is appropriate for a judge component where the reference policy is undefined.",
+    "backbone_choice": "Qwen2.5-1.5B-Instruct selected per Prometheus-2 paper (Kim et al., 2024) showing 7B-class judge viability at 1.5B with preference tuning.",
+    "lora_rank": "Rank 16 with alpha 32 (2:1 ratio) is standard for task-specific adaptation. Rank 8 was considered but judge rubric complexity warrants higher rank.",
+    "beta_orpo": "Beta=0.1 follows ORPO paper (Hong et al., 2024) recommendation for instruction-following tasks."
+  }
+}

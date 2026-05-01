@@ -1,0 +1,55 @@
+{
+  "timestamp": "2026-05-01T20:29:13.687571+00:00",
+  "held_out_task_count": 59,
+  "baseline": {
+    "mean": 0.4576,
+    "std": 0.3678,
+    "min": 0.0,
+    "max": 1.0,
+    "p95": 1.0,
+    "n": 59,
+    "p95_latency_ms": 3
+  },
+  "trained": {
+    "mean": 0.4831,
+    "std": 0.1471,
+    "min": 0.3,
+    "max": 0.7,
+    "p95": 0.7,
+    "n": 59,
+    "p95_latency_ms": 0
+  },
+  "prompt_only": {
+    "mean": 0.5042,
+    "std": 0.1801,
+    "min": 0.18,
+    "max": 0.94,
+    "p95": 0.82,
+    "n": 59,
+    "p95_latency_ms": 16096
+  },
+  "delta_a": {
+    "mean_diff": 0.0254,
+    "ci_lower": -0.0315,
+    "ci_upper": 0.0814,
+    "p_value": 0.1887,
+    "significant": false,
+    "n_pairs": 59,
+    "n_bootstrap": 10000,
+    "description": "trained judge vs Week 10 baseline"
+  },
+  "delta_b": {
+    "mean_diff": -0.0212,
+    "ci_lower": -0.0443,
+    "ci_upper": 0.0,
+    "p_value": 0.9777,
+    "significant": false,
+    "n_pairs": 59,
+    "n_bootstrap": 10000,
+    "description": "trained judge vs prompt-engineered judge",
+    "finding": "prompt_engineering_sufficient",
+    "finding_explanation": "The trained ORPO judge does not significantly outperform the prompt-only Qwen3 judge. This is a legitimate and informative result: it indicates that the rubric encoding in the prompt-engineered condition is sufficient for this evaluation task at this scale of training data. It does not invalidate the trained judge \u2014 it suggests the marginal benefit of fine-tuning is task-specific and may require more preference pairs or a harder held-out distribution. For the production Conversion Engine, the prompt-only condition is a viable lower-cost alternative."
+  },
+  "bootstrap_seed": 42,
+  "bootstrap_n": 10000
+}

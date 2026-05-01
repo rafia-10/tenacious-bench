@@ -1,0 +1,91 @@
+{
+  "_note": "Populated after ablations run. Values marked PENDING are updated by run_ablations.py + bootstrap_test.py",
+  "delta_a_mean": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_a/mean_diff",
+    "value": 0.0254
+  },
+  "delta_a_ci": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_a/ci_lower+ci_upper",
+    "value": "[-0.0315, 0.0814]"
+  },
+  "delta_a_p_value": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_a/p_value",
+    "value": 0.1887
+  },
+  "delta_a_significant": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_a/significant",
+    "value": false
+  },
+  "delta_b_mean": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_b/mean_diff",
+    "value": -0.0212
+  },
+  "delta_b_significant": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_b/significant",
+    "value": false
+  },
+  "delta_b_finding": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/delta_b/finding",
+    "value": "prompt_engineering_sufficient"
+  },
+  "held_out_task_count": {
+    "source_type": "dataset",
+    "source_id": "tenacious_bench_v0.1/held_out/",
+    "value": 59
+  },
+  "training_pair_count": {
+    "source_type": "training_data",
+    "source_id": "training_data/preference_pairs.jsonl",
+    "value": 94
+  },
+  "cost_per_task_baseline": {
+    "source_type": "trace_log",
+    "source_id": "ablations/held_out_traces.jsonl",
+    "value": 0.0,
+    "note": "scoring_evaluator.py runs locally, zero API cost"
+  },
+  "cost_per_task_trained": {
+    "source_type": "trace_log",
+    "source_id": "ablations/held_out_traces.jsonl",
+    "value": 0.000245,
+    "note": "API judge call at ~500 prompt + 100 completion tokens, DeepSeek rates"
+  },
+  "baseline_mean_score": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/baseline/mean",
+    "value": 0.4576
+  },
+  "trained_mean_score": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/trained/mean",
+    "value": 0.4831
+  },
+  "prompt_only_mean_score": {
+    "source_type": "ablation_table",
+    "source_id": "ablations/ablation_results.json/prompt_only/mean",
+    "value": 0.5042
+  },
+  "total_train_tasks": {
+    "source_type": "dataset",
+    "source_id": "tenacious_bench_v0.1/train/tasks.jsonl",
+    "value": 152
+  },
+  "total_dev_tasks": {
+    "source_type": "dataset",
+    "source_id": "tenacious_bench_v0.1/dev/tasks.jsonl",
+    "value": 89
+  },
+  "tau2_bench_pass_at_1": {
+    "source_type": "trace_log",
+    "source_id": "score_log.json (Week 10, informational only)",
+    "value": 0.8,
+    "note": "tau2-bench retail pass@1 on 30 tasks, DeepSeek V3. Informational reference only per methodology."
+  }
+}

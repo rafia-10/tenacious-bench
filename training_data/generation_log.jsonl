@@ -1,0 +1,152 @@
+{"task_id": "TB-TR-032", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2093, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-030", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1866, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-017", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.257, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-027", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2405, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-015", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1775, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-028", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.283, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-020", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2781, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-031", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1802, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-042", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.6375, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-043", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.5275, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-036", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.4704, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-054", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.4634, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-041", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.3423, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-040", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.1863, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-056", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.7, "cosine_sim": 0.4938, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-071", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-TR-078", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-TR-086", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1636, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-077", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-TR-088", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.3277, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-089", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.4571, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-080", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-TR-087", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.4184, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-072", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-TR-075", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0029", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.4741, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0031", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0010", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2134, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0043", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.4722, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0006", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0020", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0011", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1667, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0022", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0019", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0012", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1517, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0028", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.4335, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0033", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PG-0027", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1454, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0008", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1274, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PG-0047", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0086", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0061", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0088", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0059", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0082", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0077", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0083", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0078", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0065", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0089", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0076", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0072", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0048", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0058", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0057", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0050", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0052", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0068", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0055", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0066", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PG-0049", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0006", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1184, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0014", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1274, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0018", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2506, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0023", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2282, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0016", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2473, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0029", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-HA-0025", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1746, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0026", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-HA-0021", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2322, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-HA-0041", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0033", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0035", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0045", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0037", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0044", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0038", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-HA-0043", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.0 < threshold=1.0)", "chosen_score": 0.0, "rejected_score": 0.0}
+{"task_id": "TB-PE-0001", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.218, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0007", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2019, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0003", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2878, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0008", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1368, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0011", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1761, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0010", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2688, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0024", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2883, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0065", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0059", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0043", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1893, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0040", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1388, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0048", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1756, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0023", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1235, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0064", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1141, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0022", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1875, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0068", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2003, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0073", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0056", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2315, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0042", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0055", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.191, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0044", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1151, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0058", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1833, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0014", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1844, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0060", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.4036, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0063", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0047", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1663, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0020", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1792, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0052", "batch": "failing\u2192chosen", "action": "discard", "reason": "chosen failed rubric (score=0.5 < threshold=0.7)", "chosen_score": 0.5, "rejected_score": 0.5}
+{"task_id": "TB-PE-0021", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1867, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0018", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2002, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0030", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1708, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0028", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.18, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-PE-0033", "batch": "failing\u2192chosen", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.3524, "source": "failing_task_generated_chosen"}
+{"task_id": "TB-TR-010", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.209, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-013", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-006", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-021", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-023", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-025", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-011", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.4119, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-012", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-009", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.3071, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-007", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-TR-051", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.2402, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-067", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.3045, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-062", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.2505, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-058", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.21, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-052", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.265, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-068", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.3019, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-064", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.2109, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-070", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.3133, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-061", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.2822, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-065", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.2958, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-TR-069", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1539, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0023", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.3211, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0017", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.219, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0001", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2426, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0002", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2532, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0038", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.3088, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0040", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2539, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0024", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2796, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PG-0035", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2001, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0001", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.2023, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0011", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1963, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0005", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1711, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0007", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1904, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0015", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1575, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0003", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1684, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-HA-0017", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.1975, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PE-0013", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.5, "cosine_sim": 0.2148, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PE-0015", "batch": "passing\u2192rejected", "action": "discard", "reason": "generated rejected still passes rubric (score=1.0)", "rejected_score": 1.0}
+{"task_id": "TB-PE-0029", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.3488, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PE-0038", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 0.7, "rejected_score": 0.0, "cosine_sim": 0.1655, "source": "passing_task_generated_rejected"}
+{"task_id": "TB-PE-0036", "batch": "passing\u2192rejected", "action": "keep", "chosen_score": 1.0, "rejected_score": 0.0, "cosine_sim": 0.1638, "source": "passing_task_generated_rejected"}

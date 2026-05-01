@@ -1,0 +1,11 @@
+unsloth[colab-new] @ git+https://github.com/unslothai/unsloth.git
+trl==0.12.2
+peft==0.14.0
+transformers==4.47.1
+datasets==3.2.0
+accelerate==1.2.1
+bitsandbytes==0.45.0
+sentencepiece==0.2.0
+protobuf==5.29.2
+torch==2.5.1
+xformers==0.0.28.post3
