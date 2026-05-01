@@ -142,3 +142,13 @@ Training details in [`methodology.md`](methodology.md). Training run: Day 5 (Uns
   license = {CC-BY-4.0}
 }
 ```
+
+---
+
+## License & Attribution
+
+This dataset and all accompanying code are released under the **[Creative Commons Attribution 4.0 International License (CC-BY-4.0)](LICENSE)**.
+
+You are free to share and adapt the material for any purpose, including commercially, provided you give appropriate credit. To attribute this work, cite the bibtex entry above or include:
+
+> Rafia Kedir, *Tenacious-Bench v0.1*, 2026. Licensed under CC-BY-4.0.
